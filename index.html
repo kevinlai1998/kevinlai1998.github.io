@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>專人書狀代寫服務</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+    .header-subtitle {
+      font-size: 1rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h1, h2 {
+      color: #1f2937;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #e5e7eb;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="site-title">專人書狀代寫服務</div>
+  <div class="header-subtitle">專業撰寫｜保密處理｜高效率交件</div>
+</header>
+
+<main>
+  <section>
+    <h2>服務內容</h2>
+    <ul>
+      <li>民事書狀：起訴狀、答辯狀、聲請支付命令狀等</li>
+      <li>刑事書狀：告訴狀、辯護書狀</li>
+      <li>行政書狀：申訴、訴願狀</li>
+      <li>其他：和解書、協議書等等代撰</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>聯絡我們</h2>
+    <p>如需協助，請填寫下列表單，我們將儘速與您聯繫：</p>
+
+    <form action="https://formspree.io/f/manjavyb" method="POST">
+      <input type="hidden" name="_next" value="thankyou.html">
+
+      <label for="name">姓名</label>
+      <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required />
+
+      <label for="email">電子信箱</label>
+      <input type="email" id="email" name="email" placeholder="請輸入您的Email" required />
+
+      <label for="message">需求說明</label>
+      <textarea id="message" name="message" rows="5" placeholder="請簡要說明您需要協助的內容" required></textarea>
+
+      <button type="submit">送出聯絡</button>
+    </form>
+
+    <p style="margin-top: 1rem; font-size: 0.9rem;">或透過以下方式聯絡我們：</p>
+    <ul>
+      <li><strong>Email：</strong><a href="mailto:lai@louislaw.group">lai@louislaw.group</a></li>
+      <li><strong>Line ID：</strong>@yourlineid</li>
+      <li><strong>電話：</strong>0901195925</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 專人書狀代寫服務 All rights reserved.
+</footer>
+
+</body>
+</html>
