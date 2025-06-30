@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>專人書狀代寫服務</title>
+  <meta name="description" content="提供專業法律書狀代寫服務，包括民事、刑事、行政案件等，保密、高效率、高品質，歡迎聯絡洽詢。">
+  <title>專人書狀代寫服務｜快速、保密、專業</title>
   <style>
     body {
       font-family: "Helvetica Neue", sans-serif;
@@ -11,43 +12,87 @@
       padding: 0;
       background-color: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
       background-color: #1f2937;
       color: white;
       padding: 1.5rem 2rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      text-align: center;
     }
+
     .site-title {
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: bold;
     }
+
     .header-subtitle {
       font-size: 1rem;
+      margin-top: 0.5rem;
     }
+
+    .hero {
+      background-color: #e0e7ff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #1e3a8a;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .cta-button {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
     main {
       padding: 2rem;
       max-width: 800px;
       margin: auto;
     }
+
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
+
     h2 {
       color: #1f2937;
+      border-left: 5px solid #2563eb;
+      padding-left: 0.5rem;
     }
+
     ul {
       list-style-type: disc;
       margin-left: 1.5rem;
     }
+
     form {
       background-color: #ffffff;
-      padding: 1rem;
+      padding: 1.5rem;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
+
     input, textarea {
       width: 100%;
       padding: 0.75rem;
@@ -56,7 +101,9 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       box-sizing: border-box;
+      font-size: 1rem;
     }
+
     button {
       background-color: #2563eb;
       color: white;
@@ -64,12 +111,33 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      font-size: 1rem;
     }
+
+    button:hover, .cta-button:hover {
+      background-color: #1d4ed8;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #e5e7eb;
       font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -80,20 +148,26 @@
   <div class="header-subtitle">專業撰寫｜保密處理｜高效率交件</div>
 </header>
 
+<section class="hero">
+  <h1>法律書狀交給我們，全方位代寫支援</h1>
+  <p>從民事、刑事到行政案件，專業律師團隊協助您準備每一份重要文件。</p>
+  <a href="#contact" class="cta-button">立即聯絡我們</a>
+</section>
+
 <main>
   <section>
     <h2>服務內容</h2>
     <ul>
-      <li>民事書狀：起訴狀、答辯狀、聲請支付命令狀等</li>
-      <li>刑事書狀：告訴狀、辯護書狀</li>
-      <li>行政書狀：申訴、訴願狀</li>
-      <li>其他：和解書、協議書等等代撰</li>
+      <li><strong>民事書狀：</strong>起訴狀、答辯狀、支付命令聲請狀等</li>
+      <li><strong>刑事書狀：</strong>告訴狀、辯護意見書</li>
+      <li><strong>行政書狀：</strong>申訴狀、訴願狀、行政訴訟起訴狀</li>
+      <li><strong>其他書狀：</strong>和解書、協議書、各式聲請狀等</li>
     </ul>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>聯絡我們</h2>
-    <p>如需協助，請填寫下列表單，我們將儘速與您聯繫：</p>
+    <p>如需協助，請填寫下列表單，我們將於24小時內與您聯繫：</p>
 
     <form action="https://formspree.io/f/manjavyb" method="POST">
       <input type="hidden" name="_next" value="thankyou.html">
@@ -110,17 +184,17 @@
       <button type="submit">送出聯絡</button>
     </form>
 
-    <p style="margin-top: 1rem; font-size: 0.9rem;">或透過以下方式聯絡我們：</p>
+    <p style="margin-top: 1.2rem; font-size: 0.95rem;">或透過以下方式直接聯繫我們：</p>
     <ul>
       <li><strong>Email：</strong><a href="mailto:lai@louislaw.group">lai@louislaw.group</a></li>
-      <li><strong>Line ID：</strong>@yourlineid</li>
-      <li><strong>電話：</strong>0901195925</li>
+      <li><strong>LINE ID：</strong>@yourlineid</li>
+      <li><strong>電話：</strong>0901-195-925</li>
     </ul>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 專人書狀代寫服務 All rights reserved.
+  &copy; 2025 專人書狀代寫服務 ｜ 保留所有權利
 </footer>
 
 </body>
