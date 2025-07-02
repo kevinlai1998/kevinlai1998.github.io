@@ -4,14 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="提供專業法律書狀代寫服務，包括民事、刑事、行政案件等，保密、高效率、高品質，歡迎聯絡洽詢。">
+  <meta name="keywords" content="法律,書狀,起訴狀,代寫,法律顧問,民事,刑事,行政,和解書,契約">
   <title>專人書狀代寫服務｜快速、保密、專業</title>
 
-  <!-- Google Fonts：繁體字型 -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/476/476863.png" type="image/png">
 
+  <!-- AOS 滾動動畫 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <style>
     body {
       font-family: 'Noto Sans TC', sans-serif;
@@ -19,67 +23,56 @@
       padding: 0;
       background-color: #f9f9f9;
       color: #333;
-      line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
       background-color: #1f2937;
       color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
+      padding: 1.2rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .site-title {
-      font-size: 2rem;
-      font-weight: bold;
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .header-subtitle {
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
       font-size: 1rem;
-      margin-top: 0.5rem;
     }
 
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1555374018-13a8994ab246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-image: url('https://images.unsplash.com/photo-1556742400-b5c5c56b1f8b?auto=format&fit=crop&w=1400&q=80');
       background-size: cover;
-      background-position: center;
       color: white;
+      padding: 4rem 1.5rem;
       text-align: center;
-      padding: 4rem 2rem;
     }
 
     .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 4px #000;
     }
 
     .hero p {
-      font-size: 1.1rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    }
-
-    .cta-button {
-      background-color: #2563eb;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin-top: 1rem;
-      text-decoration: none;
-      display: inline-block;
+      text-shadow: 1px 1px 3px #000;
     }
 
-    main {
-      padding: 2rem;
+    .section {
       max-width: 900px;
       margin: auto;
-    }
-
-    section {
-      margin-bottom: 3rem;
+      padding: 2rem 1rem;
     }
 
     h2 {
@@ -88,72 +81,46 @@
       padding-left: 0.5rem;
     }
 
-    .image-banner {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
-
     ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
+      padding-left: 1.5rem;
     }
 
-    form {
-      background-color: #ffffff;
-      padding: 1.5rem;
+    .card {
+      background: #fff;
+      padding: 1rem;
+      margin: 1rem 0;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-      font-size: 1rem;
+    .process {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
     }
 
-    button {
-      background-color: #2563eb;
+    .faq dt {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .cta {
+      background: #2563eb;
       color: white;
       padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    button:hover, .cta-button:hover {
-      background-color: #1d4ed8;
-    }
-
-    .testimonial-card {
-      background-color: #ffffff;
-      border-left: 4px solid #2563eb;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-    }
-
-    .testimonial-card p {
-      margin: 0.5rem 0;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 1rem;
     }
 
     footer {
-      text-align: center;
+      background: #e5e7eb;
       padding: 1rem;
-      background-color: #e5e7eb;
+      text-align: center;
       font-size: 0.9rem;
-      color: #555;
     }
 
-    /* 浮動 LINE 按鈕 */
     .line-float {
       position: fixed;
       bottom: 20px;
@@ -168,17 +135,9 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
-    @media (max-width: 600px) {
-      .hero {
-        padding: 2rem 1rem;
-      }
-
-      .hero h1 {
-        font-size: 1.5rem;
-      }
-
-      main {
-        padding: 1rem;
+    @media (max-width: 768px) {
+      .process {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -186,85 +145,130 @@
 <body>
 
 <header>
-  <div class="site-title">專人書狀代寫服務</div>
-  <div class="header-subtitle">專業撰寫｜保密處理｜高效率交件</div>
+  <nav>
+    <div><strong>書狀代寫服務</strong></div>
+    <div>
+      <a href="#about">關於我</a>
+      <a href="#services">服務內容</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">聯絡</a>
+    </div>
+  </nav>
 </header>
 
 <section class="hero">
-  <h1>法律書狀交給我們，全方位支援</h1>
-  <p>從民事、刑事到行政案件，我們以專業、高效率協助您處理各類法律文件。</p>
-  <a href="#contact" class="cta-button">立即聯絡我們</a>
+  <h1>專人書狀代寫｜高效率、保密、專業</h1>
+  <p>讓法律專業協助您完成最重要的第一步</p>
+  <a href="#contact" class="cta">立即聯絡</a>
 </section>
 
-<main>
-  <section>
-    <h2>服務內容</h2>
-    <img src="https://images.unsplash.com/photo-1556742400-b5c5c56b1f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="法律文件圖片" class="image-banner">
-    <ul>
-      <li><strong>民事書狀：</strong>起訴狀、答辯狀、支付命令聲請狀等</li>
-      <li><strong>刑事書狀：</strong>告訴狀、辯護意見書</li>
-      <li><strong>行政書狀：</strong>申訴狀、訴願狀、行政訴訟起訴狀</li>
-      <li><strong>其他書狀：</strong>和解書、協議書、各式聲請狀等</li>
-    </ul>
-  </section>
+<section class="section" id="about" data-aos="fade-up">
+  <h2>關於我</h2>
+  <div class="card">
+    <p>我畢業於國立臺北大學法律學系，並完成碩士班課程，專攻民事法領域。曾任多起案件研究助理，熟悉法律文書撰寫與訴訟流程，堅持保密、精準與效率的原則，協助客戶妥善解決法律問題。</p>
+  </div>
+</section>
 
-  <section>
-    <h2>客戶評價</h2>
-    <div class="testimonial-card">
-      <p><strong>林小姐｜民事起訴狀：</strong></p>
-      <p>感謝協助我迅速完成起訴狀，法院受理非常順利，文件也很專業，真的非常感謝！</p>
+<section class="section" id="services" data-aos="fade-up">
+  <h2>服務內容</h2>
+  <ul>
+    <li>民事：起訴狀、答辯狀、支付命令、聲請狀等</li>
+    <li>刑事：告訴狀、辯護意見書、再議狀等</li>
+    <li>行政：申訴狀、訴願狀、行政訴訟起訴狀等</li>
+    <li>其他：協議書、和解書、催告函等</li>
+  </ul>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>服務流程</h2>
+  <div class="process">
+    <div class="card">
+      <strong>步驟一：</strong>
+      <p>聯絡我們並說明案件需求</p>
     </div>
-    <div class="testimonial-card">
-      <p><strong>張先生｜行政訴願狀：</strong></p>
-      <p>從來沒自己寫過書狀，謝謝你們清楚詢問背景、撰寫內容完整又具法律依據，推薦！</p>
+    <div class="card">
+      <strong>步驟二：</strong>
+      <p>進行初步溝通與報價</p>
     </div>
-  </section>
+    <div class="card">
+      <strong>步驟三：</strong>
+      <p>撰寫完成後寄送書狀（可修訂一次）</p>
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h2>法律小知識 / 部落格</h2>
-    <ul>
-      <li><a href="#">法律書狀撰寫常見問題與解答（FAQ）</a></li>
-      <li><a href="#">起訴狀與答辯狀的差異是什麼？</a></li>
-    </ul>
-    <p><a href="#">查看更多文章 →</a></p>
-  </section>
+<section class="section" data-aos="fade-up">
+  <h2>服務保證</h2>
+  <div class="process">
+    <div class="card">
+      <strong>100% 保密</strong>
+      <p>您的案件與資訊絕不外洩</p>
+    </div>
+    <div class="card">
+      <strong>高效率交件</strong>
+      <p>一般案件 3 日內可交件，急件可加快</p>
+    </div>
+    <div class="card">
+      <strong>專業文書</strong>
+      <p>採用律師常用語句、結構嚴謹</p>
+    </div>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>聯絡我們</h2>
-    <p>請填寫下列表單，我們將於 24 小時內與您聯繫：</p>
+<section class="section" id="faq" data-aos="fade-up">
+  <h2>常見問題 FAQ</h2>
+  <dl class="faq">
+    <dt>Q：完成書狀需要多久？</dt>
+    <dd>A：一般 2～3 天內，急件請事先告知。</dd>
 
-    <form action="https://formspree.io/f/manjavyb" method="POST">
-      <input type="hidden" name="_next" value="thankyou.html">
+    <dt>Q：會協助我送法院嗎？</dt>
+    <dd>A：本服務僅代撰書狀，送件需由您本人或律師完成。</dd>
 
-      <label for="name">姓名</label>
-      <input type="text" id="name" name="name" required />
+    <dt>Q：是否包含法律諮詢？</dt>
+    <dd>A：可初步簡要分析，若需深入諮詢建議委任律師。</dd>
 
-      <label for="email">電子信箱</label>
-      <input type="email" id="email" name="email" required />
+    <dt>Q：可以修改幾次？</dt>
+    <dd>A：可免費修改一次，第二次起酌收費。</dd>
+  </dl>
+</section>
 
-      <label for="message">需求說明</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+<section class="section" id="contact" data-aos="fade-up">
+  <h2>聯絡我們</h2>
+  <p>請填寫下列表單，我們將盡快回覆：</p>
+  <form action="https://formspree.io/f/manjavyb" method="POST">
+    <input type="text" name="name" placeholder="您的姓名" required />
+    <input type="email" name="email" placeholder="您的信箱" required />
+    <textarea name="message" rows="5" placeholder="請簡述您的需求與問題" required></textarea>
+    <button type="submit">送出聯絡</button>
+  </form>
+  <p style="margin-top:1rem">或直接聯絡：</p>
+  <ul>
+    <li>Email：<a href="mailto:lai@louislaw.group">lai@louislaw.group</a></li>
+    <li>LINE：<a href="https://line.me/ti/p/3mjfs3C42e" target="_blank">加入官方 LINE</a></li>
+    <li>電話：0901-195-925</li>
+  </ul>
+</section>
 
-      <button type="submit">送出聯絡</button>
-    </form>
-
-    <p style="margin-top: 1.2rem; font-size: 0.95rem;">或透過以下方式直接聯繫我們：</p>
-    <ul>
-      <li><strong>Email：</strong><a href="mailto:lai@louislaw.group">lai@louislaw.group</a></li>
-      <li><strong>LINE：</strong><a href="https://line.me/ti/p/3mjfs3C42e" target="_blank">加入我們的 LINE 官方帳號</a></li>
-      <li><strong>電話：</strong>0901-195-925</li>
-    </ul>
-  </section>
-</main>
-
-<!-- 浮動LINE按鈕 -->
-<a class="line-float" href="https://line.me/ti/p/3mjfs3C42e" target="_blank" title="LINE 聯絡我">
-  <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="LINE 聯絡按鈕">
+<a class="line-float" href="https://line.me/ti/p/3mjfs3C42e" target="_blank">
+  <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入 LINE">
 </a>
 
 <footer>
   &copy; 2025 專人書狀代寫服務 ｜ 保留所有權利
 </footer>
+
+<!-- AOS script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- Google Analytics 追蹤碼（等你提供代碼） -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=你的GA_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '你的GA_ID');
+</script> -->
 
 </body>
 </html>
